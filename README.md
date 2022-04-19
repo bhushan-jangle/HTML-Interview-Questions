@@ -8,10 +8,10 @@ Go to [Coding Exercise](#coding-exercise) for coding specific questions
 
 | No. | Questions |
 |---- | ---------
-|1  | [What is <!Doctype html> in Html5](#what-are-the-possible-ways-to-create-objects-in-javascript) |
-|2  | [What is difference between div and span in Html](#what-is-a-prototype-chain)|
-|3  | [What is semantic tags and non semantic tags in Html](#what-is-the-difference-between-call-apply-and-bind)|
-|4  | [What is difference between html and html5](#what-is-json-and-its-common-operations)|
+|1  | [What is <!Doctype html> in Html5](#What is <!Doctype html> in Html5) |
+|2  | [What is difference between div and span in Html](#What is difference between div and span in Html)|
+|3  | [What is semantic tags and non semantic tags in Html](#What is semantic tags and non semantic tags in Html)|
+|4  | [What is difference between html and html5](#What is difference between html and html5)|
 |5  | [What is Iframe tag in Html5](#what-is-the-purpose-of-the-array-slice-method)|
 |6  | [What are the formatting tags in html](#what-is-the-purpose-of-the-array-splice-method)|
 |7  | [What is difference <b> and <Strong> in html](#what-is-the-difference-between-slice-and-splice)|
@@ -21,7 +21,7 @@ Go to [Coding Exercise](#coding-exercise) for coding specific questions
 |11 | [What is difference between Html and Html5](#what-is-a-first-class-function)|
 
 
-1. ### What are the possible ways to create objects in JavaScript
+1. ### What is <!Doctype html> in Html5
 
       All HTML documents must start with a <!DOCTYPE> declaration.
 
@@ -41,162 +41,52 @@ Go to [Coding Exercise](#coding-exercise) for coding specific questions
    
       ```<!doctype html>```
 
-   3. **Object literal syntax:**
-
-      The object literal syntax is equivalent to create method when it passes null as parameter
-
-      ```javascript
-      var object = {};
-      ```
-
-   4. **Function constructor:**
-
-      Create any function and apply the new operator to create object instances,
-
-      ```javascript
-      function Person(name){
-         this.name=name;
-         this.age=21;
-      }
-      var object = new Person("Sudheer");
-      ```
-
-   5. **Function constructor with prototype:**
-
-      This is similar to function constructor but it uses prototype for their properties and methods,
-
-      ```javascript
-      function Person(){}
-      Person.prototype.name = "Sudheer";
-      var object = new Person();
-      ```
-
-      This is equivalent to an instance created with an object create method with a function prototype and then call that function with an instance and parameters as arguments.
-
-      ```javascript
-      function func {};
-
-      new func(x, y, z);
-      ```
-
-      **(OR)**
-
-      ```javascript
-      // Create a new instance using function prototype.
-      var newInstance = Object.create(func.prototype)
-
-      // Call the function
-      var result = func.call(newInstance, x, y, z),
-
-      // If the result is a non-null object then use it otherwise just use the new instance.
-      console.log(result && typeof result === 'object' ? result : newInstance);
-      ```
-
-   6. **ES6 Class syntax:**
-
-      ES6 introduces class feature to create the objects
-
-      ```javascript
-      class Person {
-         constructor(name) {
-            this.name = name;
-         }
-      }
-
-      var object = new Person("Sudheer");
-      ```
-
-   7. **Singleton pattern:**
-
-      A Singleton is an object which can only be instantiated one time. Repeated calls to its constructor return the same instance and this way one can ensure that they don't accidentally create multiple instances.
-
-      ```javascript
-      var object = new function(){
-         this.name = "Sudheer";
-      }
-      ```
-
+      
       **[⬆ Back to Top](#table-of-contents)**
 
-2. ### What is a prototype chain
+2. ### What is difference between div and span in Html
 
-    **Prototype chaining** is used to build new types of objects based on existing ones. It is similar to inheritance in a class based language. 
+    **Span and div** are both generic HTML elements that group together related parts of a web page. 
     
-    The prototype on object instance is available through **Object.getPrototypeOf(object)** or **__proto__** property whereas prototype on constructors function is available through **Object.prototype**.
-
-    ![Screenshot](images/prototype_chain.png)
+    **However, they serve different functions.**.
+    A div element is used for block-level organization and styling of page elements,
+    whereas a span element is used for inline organization and styling.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-3. ### What is the difference between Call, Apply and Bind
+3. ### What is semantic tags and non semantic tags in Html
 
-    The difference between Call, Apply and Bind can be explained with below examples,
+    **semantic tags**
+    A semantic element clearly describes its meaning to both the browser and the developer.
 
-    **Call:** The call() method invokes a function with a given `this` value and arguments provided one by one
-
-    ```javascript
-    var employee1 = {firstName: 'John', lastName: 'Rodson'};
-    var employee2 = {firstName: 'Jimmy', lastName: 'Baily'};
-
-    function invite(greeting1, greeting2) {
-        console.log(greeting1 + ' ' + this.firstName + ' ' + this.lastName+ ', '+ greeting2);
-    }
-
-    invite.call(employee1, 'Hello', 'How are you?'); // Hello John Rodson, How are you?
-    invite.call(employee2, 'Hello', 'How are you?'); // Hello Jimmy Baily, How are you?
-    ```
-
-    **Apply:** Invokes the function with a given `this` value and allows you to pass in arguments as an array
-
-    ```javascript
-    var employee1 = {firstName: 'John', lastName: 'Rodson'};
-    var employee2 = {firstName: 'Jimmy', lastName: 'Baily'};
-
-    function invite(greeting1, greeting2) {
-        console.log(greeting1 + ' ' + this.firstName + ' ' + this.lastName+ ', '+ greeting2);
-    }
-
-    invite.apply(employee1, ['Hello', 'How are you?']); // Hello John Rodson, How are you?
-    invite.apply(employee2, ['Hello', 'How are you?']); // Hello Jimmy Baily, How are you?
-    ```
-
-    **bind:** returns a new function, allowing you to pass any number of arguments
-
-    ```javascript
-    var employee1 = {firstName: 'John', lastName: 'Rodson'};
-    var employee2 = {firstName: 'Jimmy', lastName: 'Baily'};
-
-    function invite(greeting1, greeting2) {
-        console.log(greeting1 + ' ' + this.firstName + ' ' + this.lastName+ ', '+ greeting2);
-    }
-
-    var inviteEmployee1 = invite.bind(employee1);
-    var inviteEmployee2 = invite.bind(employee2);
-    inviteEmployee1('Hello', 'How are you?'); // Hello John Rodson, How are you?
-    inviteEmployee2('Hello', 'How are you?'); // Hello Jimmy Baily, How are you?
-    ```
-
-    Call and apply are pretty interchangeable. Both execute the current function immediately. You need to decide whether it’s easier to send in an array or a comma separated list of arguments. You can remember by treating Call is for **comma** (separated list) and Apply is for **Array**. 
-    
-    Whereas Bind creates a new function that will have `this` set to the first parameter passed to bind().
+    Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+      
+    Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-4. ### What is JSON and its common operations
+4. ### What is difference between html and html5
 
-    **JSON** is a text-based data format following JavaScript object syntax, which was popularized by `Douglas Crockford`. It is useful when you want to transmit data across a network and it is basically just a text file with an extension of .json, and a MIME type of application/json
+    **HTML** 
+    A hypertext markup language (HTML) is the primary language for developing web pages.
+    Language in HTML does not have support for video and audio.
+      
+     1. Easy and simple to use.
+     2. Widely supported by almost all the web browsers.
+     3. Standard language for making the structure of the web pages.
+     4. Code is very lightweight, thus providing better speed online.
+     5. Free to use. And it can be run on browsers only, so there is no need to buy any external software.
     
-    **Parsing:** Converting a string to a native object
-
-    ```javascript
-    JSON.parse(text)
-    ```
-
-    **Stringification:** converting a native object to a string so it can be transmitted across the network
-
-    ```javascript
-    JSON.stringify(object)
-    ```
+    **HTML5:** 
+    HTML5 is a new version of HTML with new functionalities with markup language with Internet technologies.
+    HTML5 supports both video and audio.
+      
+     1. There are many attributes present in HTML5 that were not present in HTML. E.g., data-, offline, onabort, onblur etc.
+     2. It provides support for audio, video and other multimedia contents by using tags like <audio>,<video>,<canvas> etc.
+        There are many page layouts options available in HTML5. In HTML, you can only find page layouts tags like div, span, etc. But in HTML5, there are many more tag         options available like header, footer, article, section, etc.
+     3. HTML5 supports Search Engine Optimisation(SEO). Search engine optimization helps the websites to know about the popularity of their content and also provides           insights on how to improve the content to increase the traffic on the websites.
+     4. HTML5 provides more flexible storage options. HTML used the concept of cookies to store temporary data, but HTML5 is capable of using a user-side database like         SQL. It also allows the user to view previously visited page data in offline mode.
+     5. HTML5 eliminates the need to write multiple codes for multiple platforms. The code written in HTML5 supports mobile or tablet layout also. Thus it provides             multi-platform compatibility.
 
     **[⬆ Back to Top](#table-of-contents)**
 

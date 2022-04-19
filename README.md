@@ -23,22 +23,27 @@ Go to [Coding Exercise](#coding-exercise) for coding specific questions
 
 1. ### What are the possible ways to create objects in JavaScript
 
-   There are many ways to create objects in javascript as below
+      All HTML documents must start with a <!DOCTYPE> declaration.
 
-   1. **Object constructor:**
+      The declaration is not an HTML tag. It is an "information" to the browser about what document type to expect.
 
-      The simplest way to create an empty object is using the Object constructor. Currently this approach is not recommended.
+      In HTML 5, the declaration is simple:
 
-      ```javascript
-      var object = new Object();
+      ```<!DOCTYPE html>
       ```
 
-   2. **Object's create method:**
-
-      The create method of Object creates a new object by passing the prototype object as a parameter
-
-      ```javascript
-      var object = Object.create(null);
+      Tip: The <!DOCTYPE> declaration is NOT case sensitive.
+   
+      ```<!DOCTYPE html>
+      ```
+   
+      ```<!DocType html>
+      ```
+   
+      ```<!Doctype html>
+      ```
+   
+      ```<!doctype html>
       ```
 
    3. **Object literal syntax:**

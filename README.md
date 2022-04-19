@@ -29,22 +29,17 @@ Go to [Coding Exercise](#coding-exercise) for coding specific questions
 
       In HTML 5, the declaration is simple:
 
-      ```<!DOCTYPE html>
-      ```
+      ```<!DOCTYPE html>```
 
       Tip: The <!DOCTYPE> declaration is NOT case sensitive.
    
-      ```<!DOCTYPE html>
-      ```
+      ```<!DOCTYPE html>```
    
-      ```<!DocType html>
-      ```
+      ```<!DocType html>```
    
-      ```<!Doctype html>
-      ```
+      ```<!Doctype html>```
    
-      ```<!doctype html>
-      ```
+      ```<!doctype html>```
 
    3. **Object literal syntax:**
 

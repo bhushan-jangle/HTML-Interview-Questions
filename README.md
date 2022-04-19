@@ -12,8 +12,8 @@ Go to [Coding Exercise](#coding-exercise) for coding specific questions
 |2  | [What is difference between div and span in Html](#What-is-difference-between-div-and-span-in-Html)|
 |3  | [What is semantic tags and non semantic tags in Html](#What-is-semantic-tags-and-non-semantic-tags-in-Html)|
 |4  | [What is difference between html and html5](#What-is-difference-between-html-and-html5)|
-|5  | [What is Iframe tag in Html5](#What is Iframe tag in Html5)|
-|6  | [What are the formatting tags in html](#what-is-the-purpose-of-the-array-splice-method)|
+|5  | [What is Iframe tag in Html5](#What-is-Iframe-tag-in-Html5)|
+|6  | [What are the formatting tags in html](#What-are-the-formatting-tags-in-html)|
 |7  | [What is difference <b> and <Strong> in html](#what-is-the-difference-between-slice-and-splice)|
 |8  | [What is view port attribute in html](#how-do-you-compare-object-and-map)|
 |9  | [What is attribute in html](#what-is-the-difference-between--and--operators)|
@@ -101,23 +101,23 @@ Go to [Coding Exercise](#coding-exercise) for coding specific questions
 
     **[⬆ Back to Top](#table-of-contents)**
 
-6. ### What is the purpose of the array splice method
+6. ### What are the formatting tags in html
 
-    The **splice()** method is used either adds/removes items to/from an array, and then returns the removed item. The first argument specifies the array position for insertion or deletion whereas the optional second argument indicates the number of elements to be deleted. Each additional argument is added to the array. 
+    HTML Formatting is a process of formatting text for better look and feel. HTML provides us ability to format text without using CSS. There are many formatting tags     in HTML.These tags are used to make text bold, italicized, or underlined. There are almost 14 options available that how text appears in HTML and XHTML.
+      
+    In HTML the formatting tags are divided into two categories:
+
+      Physical tag: These tags are used to provide the visual appearance to the text.
+      Logical tag: These tags are used to add some logical or semantic value to the text.
     
-    Some of the examples of this method are,
-
-    ```javascript
-    let arrayIntegersOriginal1 = [1, 2, 3, 4, 5];
-    let arrayIntegersOriginal2 = [1, 2, 3, 4, 5];
-    let arrayIntegersOriginal3 = [1, 2, 3, 4, 5];
-
-    let arrayIntegers1 = arrayIntegersOriginal1.splice(0,2); // returns [1, 2]; original array: [3, 4, 5]
-    let arrayIntegers2 = arrayIntegersOriginal2.splice(3); // returns [4, 5]; original array: [1, 2, 3]
-    let arrayIntegers3 = arrayIntegersOriginal3.splice(3, 1, "a", "b", "c"); //returns [4]; original array: [1, 2, 3, "a", "b", "c", 5]
-    ```
-
-    **Note:** Splice method modifies the original array and returns the deleted array.
+      ```<b> - Bold text.
+      <strong> - Important text.
+      <i> - Italic text.
+      <em> - Emphasized text.
+      <mark> - Marked text.
+      <small> - Smaller text.
+      <del> - Deleted text.
+      <ins> - Inserted text.```
 
     **[⬆ Back to Top](#table-of-contents)**
 

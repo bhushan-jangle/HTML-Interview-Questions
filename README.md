@@ -8,11 +8,11 @@ Go to [Coding Exercise](#coding-exercise) for coding specific questions
 
 | No. | Questions |
 |---- | ---------
-|1  | [What is <!Doctype html> in Html5](#What is <!Doctype html> in Html5) |
-|2  | [What is difference between div and span in Html](#What is difference between div and span in Html)|
-|3  | [What is semantic tags and non semantic tags in Html](#What is semantic tags and non semantic tags in Html)|
-|4  | [What is difference between html and html5](#What is difference between html and html5)|
-|5  | [What is Iframe tag in Html5](#what-is-the-purpose-of-the-array-slice-method)|
+|1  | [What is <!Doctype html> in Html5](#What-is-<!Doctype-html>-in-Html5) |
+|2  | [What is difference between div and span in Html](#What-is-difference-between-div-and-span-in-Html)|
+|3  | [What is semantic tags and non semantic tags in Html](#What-is-semantic-tags-and-non-semantic-tags-in-Html)|
+|4  | [What is difference between html and html5](#What-is-difference-between-html-and-html5)|
+|5  | [What is Iframe tag in Html5](#What is Iframe tag in Html5)|
 |6  | [What are the formatting tags in html](#what-is-the-purpose-of-the-array-splice-method)|
 |7  | [What is difference <b> and <Strong> in html](#what-is-the-difference-between-slice-and-splice)|
 |8  | [What is view port attribute in html](#how-do-you-compare-object-and-map)|
@@ -90,20 +90,14 @@ Go to [Coding Exercise](#coding-exercise) for coding specific questions
 
     **[⬆ Back to Top](#table-of-contents)**
 
-5. ### What is the purpose of the array slice method
+5. ### What is Iframe tag in Html5
 
-    The **slice()** method returns the selected elements in an array as a new array object. It selects the elements starting at the given start argument, and ends at the given optional end argument without including the last element. If you omit the second argument then it selects till the end.
-    
-    Some of the examples of this method are,
+    The <iframe> tag specifies an inline frame.
+    An inline frame is used to embed another document within the current HTML document.
+      
+    Tip: Use CSS to style the <iframe> (see example below). 
 
-    ```javascript
-    let arrayIntegers = [1, 2, 3, 4, 5];
-    let arrayIntegers1 = arrayIntegers.slice(0,2); // returns [1,2]
-    let arrayIntegers2 = arrayIntegers.slice(2,3); // returns [3]
-    let arrayIntegers3 = arrayIntegers.slice(4); //returns [5]
-    ```
-
-    **Note:** Slice method won't mutate the original array but it returns the subset as a new array.
+    Tip: It is a good practice to always include a title attribute for the <iframe>. This is used by screen readers to read out what the content of the <iframe> is.
 
     **[⬆ Back to Top](#table-of-contents)**
 
